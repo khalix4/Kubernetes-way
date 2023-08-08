@@ -1,0 +1,16 @@
+#creating a replicaset using yaml 
+
+apiVersion: v1
+kind: ReplicaSet
+metadata:
+  name: myapp
+  labels:
+    name: myapp
+    tier: frontend
+spec:
+  selector:
+    matchLabels:
+      name: myapp
+      tier: frontend
+  replicas: 1
+
